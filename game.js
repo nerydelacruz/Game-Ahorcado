@@ -22,26 +22,55 @@ function dibujarCabeza() {
 }
 
 
-ctxWordsZone.font('48px serif');
-ctxWordsZone.strokeText('Hola',20,30)
+
 
 //dibujarCabeza();
-const letters = ['A', 'B', 'C', 'D', 'E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const palabrasGroup = ['pancho', 'dado','otorrinoralingologofdfffffffffffffffffffffffffffffffffffffffffffff'];
 
-    // Referencia al contenedor donde se agregarán los botones
-    const buttonContainer = document.getElementById('button-container');
 
-    // Itera sobre el array de letras
-    letters.forEach(letter => {
-        // Crea un botón para cada letra
-        const button = document.createElement('button');
-        
-        // Agrega la clase definida a cada botón
-        button.className = 'custom-button';
-        
-        // Asigna la letra como texto del botón
-        button.textContent = letter;
-        
-        // Inserta el botón en el contenedor
-        buttonContainer.appendChild(button);
-    });
+// Referencia al contenedor donde se agregarán los botones
+const buttonContainer = document.getElementById('button-container');
+
+
+
+
+// Itera sobre el array de letras
+letters.forEach(letter => {
+    // Crea un botón para cada letra
+    const button = document.createElement('button');
+
+    // Agrega la clase definida a cada botón
+    button.className = 'custom-button';
+
+    // Asigna la letra como texto del botón
+    button.textContent = letter;
+
+    button.addEventListener('click', () => {
+        ctxWordsZone.clearRect(0, 0, canvasWordsZone.width, canvasWordsZone.height);
+        ctxWordsZone.font = ('48px Impact');
+        ctxWordsZone.fillText(letter, 5, 70);
+    })
+
+    // Inserta el botón en el contenedor
+    buttonContainer.appendChild(button);
+});
+
+
+let numeroLetrasPalabraEscogida = 0;
+console.log(Math.floor(Math.random() * 2));
+console.log(Math.random() * 2);
+palabrasGroup.forEach((index, index2) => {
+    if (index2 == 2) {
+        console.log(index.length)
+        numeroLetrasPalabraEscogida = index.length
+    }
+})
+
+console.log(numeroLetrasPalabraEscogida)
+let casilla =0;
+for (i = 1; i <= numeroLetrasPalabraEscogida; i++) {
+    ctxWordsZone.font = ('48px Impact');
+    ctxWordsZone.fillText('_', 50+casilla, 40);
+    casilla = casilla +50;
+}
