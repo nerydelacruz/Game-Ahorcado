@@ -26,7 +26,7 @@ function dibujarCabeza() {
 
 //dibujarCabeza();
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const palabrasGroup = ['pancho', 'dado','otorrinoralingologofdfffffffffffffffffffffffffffffffffffffffffffff'];
+const palabrasGroup = ['pancho', 'dado','otorrinoralingologo'];
 
 
 // Referencia al contenedor donde se agregarán los botones
@@ -56,21 +56,15 @@ letters.forEach(letter => {
     buttonContainer.appendChild(button);
 });
 
-
+console.log('Palabras Group:'+Math.floor(Math.random() * palabrasGroup.length))
 let numeroLetrasPalabraEscogida = 0;
-console.log(Math.floor(Math.random() * 2));
-console.log(Math.random() * 2);
+//console.log(Math.floor(Math.random() * 2));
+//console.log(Math.floor(Math.random() * 3));
 palabrasGroup.forEach((index, index2) => {
-    if (index2 == 2) {
-        console.log(index.length)
+    if (index2 == Math.floor(Math.random() * palabrasGroup.length)) {
+        console.log(index2.length)
         numeroLetrasPalabraEscogida = index.length
     }
 })
 
 console.log(numeroLetrasPalabraEscogida)
-let casilla =0;
-for (i = 1; i <= numeroLetrasPalabraEscogida; i++) {
-    ctxWordsZone.font = ('48px Impact');
-    ctxWordsZone.fillText('_', 50+casilla, 40);
-    casilla = casilla +50;
-}
