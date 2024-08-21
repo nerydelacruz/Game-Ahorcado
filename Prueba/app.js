@@ -8,9 +8,10 @@ tblCanva.moveTo(10,10);
 tblCanva.lineTo(50,10);
 tblCanva.stroke();
 */
+let palabra = [...'hola']
 console.log(tableros.width)
 //Sabiendo que el rectangulo mide 140 width y 170 height
-const numLines = 6
+const numLines = palabra.length
 const lineWidth = 20 // Ancho de las líneas
 const spacing = 10 // Espacio entre las líneas (ajustable)
 const centroWidth = 250;
@@ -21,7 +22,7 @@ const totalLinesWidth = numLines * lineWidth + (numLines - 1) * spacing
 let startX = centroWidth - totalLinesWidth / 2
 //console.log('centro '+startX)
 
-let palabra = [...'tomate']
+
 
 for(i=1;i<=palabra.length;i++){
     tblCanva.lineWith = 2
@@ -38,7 +39,7 @@ for(i=1;i<=palabra.length;i++){
 }
 
 
-
+/*
 let objeto = {};
 startX = centroWidth - totalLinesWidth / 2;
 for(i=0;i<6;i++){
@@ -55,3 +56,4 @@ console.log(objeto[1].xInicio)
 
 tblCanva.font = '15px Impact'
 tblCanva.fillText(objeto[2].letra, objeto[2].xInicio+4,centroHeight-2)
+*/
