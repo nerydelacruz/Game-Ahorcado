@@ -28,12 +28,12 @@ dibujarCabeza();
 
 function dibujarBrazoIzquierdo(){
      ctxZone.lineWidth = 2
-     ctxZone.fillStyle = '#0d0b14'
-     ctxZone.strokeStyle = '#0d0b14'
+     ctxZone.fillStyle = '#a247e8'
+     ctxZone.strokeStyle = '#a247e8'
      ctxZone.beginPath()
-     ctxZone.moveTo(480, 400)
-     ctxZone.quadraticCurveTo(484, 283, 504, 291)
-     ctxZone.quadraticCurveTo(508, 295, 511, 300)
+     ctxZone.moveTo(473, 300)
+     ctxZone.quadraticCurveTo(473, 300, 400, 430)
+     //ctxZone.quadraticCurveTo(508, 295, 511, 300)
      ctxZone.stroke()
 }
 dibujarBrazoIzquierdo();
