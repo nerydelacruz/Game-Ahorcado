@@ -62,9 +62,16 @@ dibujarBrazoIzquierdo()
 
 function dibujarBrazoDerecho(){
     ctxZone.lineWidth = 1
-    ctxZone.fillStyle = '#000'
-    ctxZone.strokeStyle = '#000'
+    ctxZone.fillStyle = '#fff'
+    ctxZone.strokeStyle = '#fff'
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(507, 330, 515, 329, 520, 333)
+    ctxZone.stroke();
+    ctxZone.beginPath()
+    ctxZone.moveTo()
 }
+
+dibujarBrazoDerecho();
 
 //dibujarCabeza();
 const letters = [
