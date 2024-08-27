@@ -1,8 +1,8 @@
-const canvasZoneGame = document.getElementById('game-zone-id');
-const ctxZone = canvasZoneGame.getContext('2d');
+const canvasZoneGame = document.getElementById('game-zone-id')
+const ctxZone = canvasZoneGame.getContext('2d')
 
-const canvasWordsZone = document.getElementById('words-zone-id');
-const ctxWordsZone = canvasWordsZone.getContext('2d');
+const canvasWordsZone = document.getElementById('words-zone-id')
+const ctxWordsZone = canvasWordsZone.getContext('2d')
 
 function dibujarCabeza() {
     ctxZone.lineWidth = 2
@@ -24,34 +24,88 @@ function dibujarCabeza() {
     ctxZone.stroke()
 }
 
-dibujarCabeza();
+dibujarCabeza()
 
-function dibujarBrazoIzquierdo(){
-     ctxZone.lineWidth = 0.5
-     ctxZone.fillStyle = '#fff'
-     ctxZone.strokeStyle = '#fff'
-     ctxZone.beginPath()
-     ctxZone.moveTo(498, 331)
-     ctxZone.quadraticCurveTo(473, 340, 440, 350)
-     ctxZone.stroke()
+function dibujarBrazoIzquierdo() {
+    ctxZone.lineWidth = 1
+    ctxZone.fillStyle = '#000'
+    ctxZone.strokeStyle = '#000'
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(498, 332, 490, 330, 486, 350)
+    ctxZone.bezierCurveTo(486, 348, 470, 380, 480, 360)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath();
+    ctxZone.moveTo(475,366)
+    ctxZone.quadraticCurveTo(482,374,485,373)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(485,373)
+    ctxZone.quadraticCurveTo(495, 350, 498, 332)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath();
+    ctxZone.moveTo(495,335)
+    ctxZone.lineTo(477,367)
+    ctxZone.lineTo(485,372)
+    ctxZone.lineTo(496,340)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+
 }
-dibujarBrazoIzquierdo();
+dibujarBrazoIzquierdo()
 
-
+function dibujarBrazoDerecho(){
+    ctxZone.lineWidth = 1
+    ctxZone.fillStyle = '#000'
+    ctxZone.strokeStyle = '#000'
+}
 
 //dibujarCabeza();
-const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const palabrasGroup = ['PANCHO', 'DADO','OTORRINORANRINGOLOGO   '];
-
+const letters = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'Ñ',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z',
+]
+const palabrasGroup = ['PANCHO', 'DADO', 'OTORRINORANRINGOLOGO   ']
 
 // Referencia al contenedor donde se agregarán los botones
 
 //console.log('Numero: '+palabrasGroup[Math.floor(Math.random()*palabrasGroup.length)].length)
 //console.log('Palabras Group:'+Math.floor(Math.random() * palabrasGroup.length))
-let palabraEscogidaAleatoriamente = ' ';
-let indicePalabraAleatorio = Math.floor(Math.random() * palabrasGroup.length);
-let palabraCreadaEnAleatorio = palabrasGroup[indicePalabraAleatorio];
-console.log('AQUI ESTA LA PRUEBA'+palabraCreadaEnAleatorio.length)
+let palabraEscogidaAleatoriamente = ' '
+let indicePalabraAleatorio = Math.floor(Math.random() * palabrasGroup.length)
+let palabraCreadaEnAleatorio = palabrasGroup[indicePalabraAleatorio]
+console.log('AQUI ESTA LA PRUEBA' + palabraCreadaEnAleatorio.length)
 
 let arrayPalabraAleatorio = [...palabraCreadaEnAleatorio]
 console.log(arrayPalabraAleatorio)
@@ -65,8 +119,8 @@ for(i=0;i<=palabrasGroup;i++){
 const numLines = arrayPalabraAleatorio.length
 const lineWidth = 30 // Ancho de las líneas
 const spacing = 10 // Espacio entre las líneas (ajustable)
-const centroWidth = canvasWordsZone.width/2
-const centroHeight = canvasWordsZone.height/2;
+const centroWidth = canvasWordsZone.width / 2
+const centroHeight = canvasWordsZone.height / 2
 console.log(canvasWordsZone.height)
 const totalLinesWidth = numLines * lineWidth + (numLines - 1) * spacing
 let startX = centroWidth - totalLinesWidth / 2
@@ -98,10 +152,6 @@ for (i = 0; i < numLines; i++) {
 
 console.log(objeto)
 
-
-
-
-
 const buttonContainer = document.getElementById('button-container')
 
 // Itera sobre el array de letras
@@ -120,11 +170,15 @@ letters.forEach((letter) => {
         for (i = 0; i < arrayPalabraAleatorio.length; i++) {
             if (objeto[i].letra == button.innerText) {
                 ctxWordsZone.font = '25px Impact'
-                ctxWordsZone.fillStyle = '#fff';
-                ctxWordsZone.fillText(button.innerText, objeto[i].xInicio+10,centroHeight-5)
+                ctxWordsZone.fillStyle = '#fff'
+                ctxWordsZone.fillText(
+                    button.innerText,
+                    objeto[i].xInicio + 10,
+                    centroHeight - 5
+                )
             }
         }
-        button.remove();
+        button.remove()
         /*ctxWordsZone.font = '25px Impact'
         ctxWordsZone.fillStyle = '#fff';
         ctxWordsZone.fillText(button.innerText, objeto[1].xInicio+10,centroHeight-5)*/
