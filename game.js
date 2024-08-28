@@ -28,8 +28,8 @@ dibujarCabeza()
 
 function dibujarBrazoIzquierdo() {
     ctxZone.lineWidth = 1
-    ctxZone.fillStyle = '#000'
-    ctxZone.strokeStyle = '#000'
+    ctxZone.fillStyle = '#0d0b14'
+    ctxZone.strokeStyle = '#0d0b14'
     ctxZone.beginPath()
     ctxZone.bezierCurveTo(498, 332, 490, 330, 486, 350)
     ctxZone.bezierCurveTo(486, 348, 470, 380, 480, 360)
@@ -58,20 +58,108 @@ function dibujarBrazoIzquierdo() {
     ctxZone.stroke()
 
 }
-dibujarBrazoIzquierdo()
+//dibujarBrazoIzquierdo()
 
 function dibujarBrazoDerecho(){
+    ctxZone.lineWidth = 1
+    ctxZone.fillStyle = '#0d0b14'
+    ctxZone.strokeStyle = '#0d0b14'
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(507, 330, 515, 329, 520, 333)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke();
+    ctxZone.beginPath()
+    ctxZone.moveTo(519,333);
+    ctxZone.lineTo(534,364);
+    ctxZone.lineTo(524,368);
+    ctxZone.lineTo(508,330);
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke();
+    ctxZone.beginPath();
+    ctxZone.bezierCurveTo(531,360,535,370,541,371)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(541,371,530,377,527,374)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(529, 375)
+    ctxZone.quadraticCurveTo(524, 372, 525, 365);
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(528,374)
+    ctxZone.lineTo(538,371)
+    ctxZone.lineTo(530,360)
+    ctxZone.lineTo(523,365)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+}
+
+//dibujarBrazoDerecho();
+
+function dibujarColumna(){
     ctxZone.lineWidth = 1
     ctxZone.fillStyle = '#fff'
     ctxZone.strokeStyle = '#fff'
     ctxZone.beginPath()
-    ctxZone.bezierCurveTo(507, 330, 515, 329, 520, 333)
-    ctxZone.stroke();
+    ctxZone.moveTo(499,332)
+    ctxZone.quadraticCurveTo(505,335,507,330)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo()
+    ctxZone.moveTo(507,330)
+    ctxZone.lineTo(506,327)
+    ctxZone.lineTo(498,327)
+    ctxZone.lineTo(498,332)
+    ctxZone.closePath()
+    ctxZone.fill();
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(500,332)
+    ctxZone.quadraticCurveTo(516,327,520,335)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(520,335)
+    ctxZone.lineTo(516.5,350)
+    ctxZone.lineTo(493,350)
+    ctxZone.lineTo(491,336)
+    ctxZone.lineTo(500,330)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(491,336)
+    ctxZone.quadraticCurveTo(495,330,500,332)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(516,350)
+    ctxZone.quadraticCurveTo(518,370,522,373)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(522, 373)
+    ctxZone.quadraticCurveTo(500, 385, 491, 374.5)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(516, 350)
+    ctxZone.lineTo()
+    ctxZone.stroke()
 }
 
-dibujarBrazoDerecho();
+dibujarColumna();
+
 
 //dibujarCabeza();
 const letters = [
