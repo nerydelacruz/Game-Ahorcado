@@ -29,21 +29,28 @@
     }
 
     &__content-resultados {
-        width: 400px;
-        height: 400px;
+        width: 700px;
+        height: 450px;
         color: white;
         opacity: 0;
         transition: 0.5s;
         transform: scale(0);
         z-index: 3;
         position: absolute;
-        background-color: #fe1c5c;
-        left: 40%;
-        top: 30%;
+        background-image: url(./img/joven-futurista-1.png);
+        background-size: cover;
+        left: 32%;
+        top: 28%;
+        clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%,
+        100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
+
+
     }
 
-    &__content-perdio{
-        width: 400px;
+    
+
+    &__content-perdio {
+        width: 600px;
         height: 400px;
         color: white;
         opacity: 0;
@@ -63,17 +70,23 @@
 
     }
 
-    .lost &__content-perdio{
+    .titulo-gano {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-left: 15px;
+        margin-top: 25px;
+    }
+
+    .lost &__content-perdio {
         opacity: 1;
         transition-delay: 0.5s;
         transform: scale(1);
     }
 
-    .active &__col2{
+    .active &__col2 {
         z-index: 1;
     }
 
-    .lost &__col2{
+    .lost &__col2 {
         z-index: 1;
     }
 }
