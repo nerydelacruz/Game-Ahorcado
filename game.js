@@ -3,6 +3,7 @@ const ctxZone = canvasZoneGame.getContext('2d')
 
 const canvasWordsZone = document.getElementById('words-zone-id')
 const ctxWordsZone = canvasWordsZone.getContext('2d')
+const mostrarResultado = document.querySelector('.contenedor-pag1')
 
 function dibujarCabeza() {
     ctxZone.lineWidth = 2
@@ -376,6 +377,8 @@ letters.forEach((letter) => {
                 dibujarPiernaDerecha()
             }else if(vidas==7){
                 console.log("PERDIO DE UNA")
+                mostrarResultado.classList.toggle('lost')
+                mostrarResultadoBloquear.classList.toggle('lost')
             }
         }
         //console.log(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==='A'));
@@ -411,6 +414,8 @@ letters.forEach((letter) => {
     button.addEventListener('click',()=>{
         if(Object.values(objeto).every(entrada => entrada.use ===true)===true && vidas<7){
             console.log("Ya gano")
+            mostrarResultado.classList.toggle('active');
+            mostrarResultadoBloquear.classList.toggle('active');
         }else{
             
             console.log("Esta procesando y las vidas son:"+vidas)
