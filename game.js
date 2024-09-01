@@ -4,6 +4,7 @@ const ctxZone = canvasZoneGame.getContext('2d')
 const canvasWordsZone = document.getElementById('words-zone-id')
 const ctxWordsZone = canvasWordsZone.getContext('2d')
 const mostrarResultado = document.querySelector('.contenedor-pag1')
+const columnaDescription = document.querySelector('.table-results-gano__inyeccion')
 
 function dibujarCabeza() {
     ctxZone.lineWidth = 2
@@ -346,6 +347,9 @@ console.log(objeto)
 const buttonContainer = document.getElementById('button-container')
 let vidas = 0;
 let coincidencias=0;
+let arrayLetrasAcertadas=[];
+let arrayLetrasIncorrectas=[];
+let arrayLetrasAcertadasEIncorrectas=[]
 // Itera sobre el array de letras
 letters.forEach((letter) => {
     // Crea un botón para cada letra
@@ -362,6 +366,8 @@ letters.forEach((letter) => {
     button.addEventListener('click',()=>{
         if(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==button.innerText) === -1){
             vidas = vidas+1;
+            arrayLetrasIncorrectas.push(button.innerText)
+            arrayLetrasAcertadasEIncorrectas.push(button.innerText)
             console.log(vidas)
             if(vidas==1){
                 dibujarCabeza()
@@ -378,8 +384,12 @@ letters.forEach((letter) => {
             }else if(vidas==7){
                 console.log("PERDIO DE UNA")
                 mostrarResultado.classList.toggle('lost')
-                mostrarResultadoBloquear.classList.toggle('lost')
+                //mostrarResultadoBloquear.classList.toggle('lost')
+                
             }
+        }else{
+            arrayLetrasAcertadas.push(button.innerText)
+            arrayLetrasAcertadasEIncorrectas.push(button.innerText)
         }
         //console.log(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==='A'));
     })
@@ -415,7 +425,11 @@ letters.forEach((letter) => {
         if(Object.values(objeto).every(entrada => entrada.use ===true)===true && vidas<7){
             console.log("Ya gano")
             mostrarResultado.classList.toggle('active');
-            mostrarResultadoBloquear.classList.toggle('active');
+            //mostrarResultadoBloquear.classList.toggle('active');
+            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
+            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
+            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
+                console.log(palabraCreadaEnAleatorio)
         }else{
             
             console.log("Esta procesando y las vidas son:"+vidas)

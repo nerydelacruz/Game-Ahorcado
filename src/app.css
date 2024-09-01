@@ -5,6 +5,13 @@
   background-size: cover;
 }
 
+.contenedor-principal-juego {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contenedor-pag1 {
   display: grid;
   grid-template-columns: 15% 70% 15%;
@@ -26,7 +33,7 @@
   color: aliceblue;
 }
 .contenedor-pag1__content-resultados {
-  width: 700px;
+  width: 800px;
   height: 450px;
   color: white;
   opacity: 0;
@@ -34,10 +41,10 @@
   transform: scale(0);
   z-index: 3;
   position: absolute;
-  background-image: url(./img/joven-futurista-1.png);
+  background-image: url(./img/futuristic-ninja-digital-2.jpg);
   background-size: cover;
-  left: 32%;
-  top: 28%;
+  left: 28%;
+  top: 25%;
   -webkit-clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
           clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
 }
@@ -60,9 +67,103 @@
   transform: scale(1);
 }
 .contenedor-pag1 .titulo-gano {
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-left: 15px;
-  margin-top: 25px;
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+}
+.contenedor-pag1 .subtitulo-gano {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 5px;
+  margin-left: 30px;
+  color: #ff00ee;
+}
+.contenedor-pag1 .table-results-gano {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 600px;
+  margin: 0 35px;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 20px;
+}
+.contenedor-pag1 .table-results-gano__tittle {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ff00ee;
+  border-radius: 3px;
+  padding: 10px 25px;
+  font-size: 18px;
+  color: #000;
+}
+.contenedor-pag1 .table-results-gano__tittle--description {
+  background-color: #020110;
+  color: #fff;
+}
+.contenedor-pag1 .table-results-gano__item {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.contenedor-pag1 .table-results-gano__results {
+  color: #ffff00;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.contenedor-pag1 .container-table-gano-palabra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contenedor-pag1 .table-results-gano-palabra {
+  margin: 0;
+  position: relative;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 0.2px #c3c3c3;
+  text-transform: uppercase;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.contenedor-pag1 .table-results-gano-palabra::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #f70f6c;
+  -webkit-text-stroke: 0vw #f70f6c;
+  border-right: 2px solid #f70f6c;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  0% {
+    width: 0;
+  }
 }
 .lost .contenedor-pag1__content-perdio {
   opacity: 1;

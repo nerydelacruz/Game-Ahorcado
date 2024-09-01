@@ -11,28 +11,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/normalize.css">
     <link rel="stylesheet" href="src/app.css">
 </head>
 
 <body class="fondo2">
-    <main class="contenedor-pag1 active">
+    <main class="contenedor-pag1 ">
         <div class="contenedor-pag1__content-resultados ">
-            <h2 class="titulo-gano">Has Ganado!!!</h2>
-            <p>Aqui estan tus resultados</p>
+            <h2 class="titulo-gano">AHORCADO</h2>
+            <p class="subtitulo-gano">Aqui estan tus resultados</p>
+            <div class="table-results-gano">
+                <div>
+                    <h2 class="table-results-gano__tittle">ITEM</h2>
+                    <p class="table-results-gano__item">Intentos Acertados</p>
+                    <p class="table-results-gano__item">Intentos Fallados</p>
+                    <p class="table-results-gano__item">Total de Intentos</p>
+
+                </div>
+                <div>
+                    <h2 class="table-results-gano__tittle  table-results-gano__tittle--description">DESCRIPTION</h2>
+                    <div class="table-results-gano__inyeccion">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-table-gano-palabra">
+                <p>Palabra secreta:</p>
+                <h2 class="table-results-gano-palabra" data-text="Otorri" >Otorri</h2>
+            </div>
         </div>
         <div class="contenedor-pag1__content-perdio">
             <h2>Has Perdido!!!</h2>
             <p>Aqui estan tus resultados</p>
         </div>
-        <div class="contenedor-pag1__col1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eius optio. Ex magni id doloribus ea, quibusdam repudiandae, ab voluptatem est, ducimus non veniam. Quam optio magnam sequi nam consequuntur?</div>
+        <div class="contenedor-pag1__col1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eius optio. Ex
+            magni id doloribus ea, quibusdam repudiandae, ab voluptatem est, ducimus non veniam. Quam optio magnam sequi
+            nam consequuntur?</div>
         <div class="contenedor-pag1__col2">
             <h1 class="titulo-ahorcado-page2">AHORCADO</h1>
             <canvas width="900" height="500px" class="game-zone" id="game-zone-id"></canvas>
             <canvas width="1100" height="100" class="words-zone" id="words-zone-id"></canvas>
             <div id="button-container" class="button-container-class"></div>
         </div>
-        <div class="contenedor-pag1__col3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio fugiat voluptate quo quidem ipsum nobis, consectetur eius iure? Qui facilis magnam corporis quam repudiandae commodi ab beatae at! Odio, beatae.</div>
+        <div class="contenedor-pag1__col3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio fugiat
+            voluptate quo quidem ipsum nobis, consectetur eius iure? Qui facilis magnam corporis quam repudiandae
+            commodi ab beatae at! Odio, beatae.</div>
     </main>
     <script src="game.js"></script>
 </body>
