@@ -6,11 +6,25 @@
 }
 
 .contenedor-pag1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    &__col1{
+        z-index: 2;
+        color: aliceblue;
+    }
 
+    &__col2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__col3{
+        z-index: 2;
+        color: aliceblue;
+    }
 }
 
 .titulo-ahorcado {
@@ -128,5 +142,6 @@
 .words-zone{
     display: flex;
     flex-wrap: wrap;
+    z-index: 2;
 }
 

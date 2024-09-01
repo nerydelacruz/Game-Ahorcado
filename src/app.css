@@ -6,10 +6,23 @@
 }
 
 .contenedor-pag1 {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+}
+.contenedor-pag1__col1 {
+  z-index: 2;
+  color: aliceblue;
+}
+.contenedor-pag1__col2 {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  z-index: 2;
+}
+.contenedor-pag1__col3 {
+  z-index: 2;
+  color: aliceblue;
 }
 
 .titulo-ahorcado {
@@ -71,7 +84,7 @@
 
 .game-zone {
   z-index: 3;
-  background-image: url(./img/ahorcado-gaming-2.jpg);
+  background-image: url(./img/ahorcado-gaming.png);
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
@@ -117,5 +130,6 @@
 
 .words-zone {
   display: flex;
-
+  flex-wrap: wrap;
+  z-index: 2;
 }

@@ -24,7 +24,7 @@ function dibujarCabeza() {
     ctxZone.stroke()
 }
 
-dibujarCabeza()
+
 
 function dibujarBrazoIzquierdo() {
     ctxZone.lineWidth = 1
@@ -56,9 +56,14 @@ function dibujarBrazoIzquierdo() {
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
-
+    ctxZone.beginPath()
+    ctxZone.moveTo(476,370)
+    ctxZone.quadraticCurveTo(475,380,485,374)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
 }
-//dibujarBrazoIzquierdo()
+
 
 function dibujarBrazoDerecho(){
     ctxZone.lineWidth = 1
@@ -101,14 +106,20 @@ function dibujarBrazoDerecho(){
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(529,376)
+    ctxZone.quadraticCurveTo(534,386,539,370)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
 }
 
-//dibujarBrazoDerecho();
+
 
 function dibujarColumna(){
     ctxZone.lineWidth = 1
-    ctxZone.fillStyle = '#fff'
-    ctxZone.strokeStyle = '#fff'
+    ctxZone.fillStyle = '#0d0b14'
+    ctxZone.strokeStyle = '#0d0b14'
     ctxZone.beginPath()
     ctxZone.moveTo(499,332)
     ctxZone.quadraticCurveTo(505,335,507,330)
@@ -151,14 +162,96 @@ function dibujarColumna(){
     ctxZone.beginPath()
     ctxZone.moveTo(522, 373)
     ctxZone.quadraticCurveTo(500, 385, 491, 374.5)
+    ctxZone.closePath()
+    ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(516, 350)
-    ctxZone.lineTo()
+    ctxZone.moveTo(491, 374.5)
+    ctxZone.quadraticCurveTo(495,360,492.5,350)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(492.5,350)
+    ctxZone.lineTo(516.5,350)
+    ctxZone.lineTo(516.5,362)
+    ctxZone.lineTo(518.5,367)
+    ctxZone.lineTo(520,373)
+    ctxZone.lineTo(492,375)
+    ctxZone.closePath()
+    ctxZone.fill()
     ctxZone.stroke()
 }
 
-dibujarColumna();
+
+
+function dibujarPiernaIzquierda(){
+    ctxZone.lineWidth = 1
+    ctxZone.fillStyle = '#0d0b14'
+    ctxZone.strokeStyle = '#0d0b14'
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(494,377,496,400,487,443)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(488,443)
+    ctxZone.quadraticCurveTo(500,445,506.5,442)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.bezierCurveTo(506.5,442,508,443,506.5,378)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(506.5,378)
+    ctxZone.lineTo(495,378)
+    ctxZone.lineTo(493.3,405)
+    ctxZone.lineTo(492,418)
+    ctxZone.lineTo(490,430)
+    ctxZone.lineTo(488,442.7)
+    ctxZone.lineTo(506,442)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath();
+    ctxZone.moveTo(490,445)
+    ctxZone.quadraticCurveTo(478,475,503,443)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+}
+
+
+
+function dibujarPiernaDerecha(){
+    ctxZone.lineWidth = 1
+    ctxZone.fillStyle = '#0d0b14'
+    ctxZone.strokeStyle = '#0d0b14'
+    ctxZone.beginPath()
+    ctxZone.moveTo(519,370)
+    ctxZone.quadraticCurveTo(520,400,530,441)
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(530,441)
+    ctxZone.quadraticCurveTo(520,446,513,443)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(513,443)
+    ctxZone.lineTo(505,375)
+    ctxZone.lineTo(519,373)
+    ctxZone.lineTo(519,385)
+    ctxZone.lineTo(521.5,400)
+    ctxZone.lineTo(524.5,420)
+    ctxZone.lineTo(529.5,441)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+    ctxZone.beginPath()
+    ctxZone.moveTo(528,442)
+    ctxZone.quadraticCurveTo(512,476,515,440)
+    ctxZone.closePath()
+    ctxZone.fill()
+    ctxZone.stroke()
+}
 
 
 //dibujarCabeza();
@@ -191,7 +284,7 @@ const letters = [
     'Y',
     'Z',
 ]
-const palabrasGroup = ['PANCHO', 'DADO', 'OTORRINORANRINGOLOGO   ']
+const palabrasGroup = ['PANCHO', 'DADO', 'OTORRINORANRINGOLOGOZXXXXDDD']
 
 // Referencia al contenedor donde se agregarán los botones
 
@@ -203,6 +296,7 @@ let palabraCreadaEnAleatorio = palabrasGroup[indicePalabraAleatorio]
 console.log('AQUI ESTA LA PRUEBA' + palabraCreadaEnAleatorio.length)
 
 let arrayPalabraAleatorio = [...palabraCreadaEnAleatorio]
+let arrayPalabraAleatorioComprueba = [...palabraCreadaEnAleatorio]
 console.log(arrayPalabraAleatorio)
 /*
 for(i=0;i<=palabrasGroup;i++){
@@ -241,6 +335,7 @@ for (i = 0; i < numLines; i++) {
         letra: caracter,
         xInicio: startX,
         xFinal: startX + lineWidth,
+        use: false
     }
     startX = startX + lineWidth + spacing
 }
@@ -248,7 +343,8 @@ for (i = 0; i < numLines; i++) {
 console.log(objeto)
 
 const buttonContainer = document.getElementById('button-container')
-
+let vidas = 0;
+let coincidencias=0;
 // Itera sobre el array de letras
 letters.forEach((letter) => {
     // Crea un botón para cada letra
@@ -260,10 +356,37 @@ letters.forEach((letter) => {
     // Asigna la letra como texto del botón
     button.textContent = letter
 
+    
+
+    button.addEventListener('click',()=>{
+        if(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==button.innerText) === -1){
+            vidas = vidas+1;
+            console.log(vidas)
+            if(vidas==1){
+                dibujarCabeza()
+            }else if(vidas==2){
+                dibujarColumna()
+            }else if(vidas==3){
+                dibujarBrazoIzquierdo()
+            }else if(vidas==4){
+                dibujarBrazoDerecho()
+            }else if(vidas==5){
+                dibujarPiernaIzquierda()
+            }else if(vidas==6){
+                dibujarPiernaDerecha()
+            }else if(vidas==7){
+                console.log("PERDIO DE UNA")
+            }
+        }
+        //console.log(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==='A'));
+    })
+
+    
+
     button.addEventListener('click', () => {
         console.log(button.innerText)
         for (i = 0; i < arrayPalabraAleatorio.length; i++) {
-            if (objeto[i].letra == button.innerText) {
+            if (objeto[i].letra === button.innerText) {
                 ctxWordsZone.font = '25px Impact'
                 ctxWordsZone.fillStyle = '#fff'
                 ctxWordsZone.fillText(
@@ -271,13 +394,31 @@ letters.forEach((letter) => {
                     objeto[i].xInicio + 10,
                     centroHeight - 5
                 )
+                objeto[i].use =true
+                
             }
+            
+            
         }
+
+        
         button.remove()
         /*ctxWordsZone.font = '25px Impact'
         ctxWordsZone.fillStyle = '#fff';
         ctxWordsZone.fillText(button.innerText, objeto[1].xInicio+10,centroHeight-5)*/
     })
+
+    button.addEventListener('click',()=>{
+        if(Object.values(objeto).every(entrada => entrada.use ===true)===true && vidas<7){
+            console.log("Ya gano")
+        }else{
+            
+            console.log("Esta procesando y las vidas son:"+vidas)
+        }
+    })
+
+//Object.values(objeto).every(entrada => entrada.use ===true)
+    
 
     // Inserta el botón en el contenedor
     buttonContainer.appendChild(button)
@@ -292,4 +433,7 @@ for(i=0;i<arrayPalabraAleatorio.length;i++){
     }
 }
 */
+
+
 console.log(objeto)
+console.log(arrayPalabraAleatorioComprueba)
