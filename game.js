@@ -5,7 +5,9 @@ const canvasWordsZone = document.getElementById('words-zone-id')
 const ctxWordsZone = canvasWordsZone.getContext('2d')
 const mostrarResultado = document.querySelector('.contenedor-pag1')
 const columnaDescription = document.querySelector('.table-results-gano__inyeccion')
-
+const columnaDescriptionPerdio = document.querySelector('.table-results-gano__inyeccion--perdio')
+const txtPalabraSecreta = document.getElementById('txtPalabraSecreta')
+const containListaPalabrasUsadas = document.querySelector('.contenedor-lista-palabras')
 function dibujarCabeza() {
     ctxZone.lineWidth = 2
     ctxZone.fillStyle = '#0d0b14'
@@ -39,35 +41,35 @@ function dibujarBrazoIzquierdo() {
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath();
-    ctxZone.moveTo(475,366)
-    ctxZone.quadraticCurveTo(482,374,485,373)
+    ctxZone.moveTo(475, 366)
+    ctxZone.quadraticCurveTo(482, 374, 485, 373)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(485,373)
+    ctxZone.moveTo(485, 373)
     ctxZone.quadraticCurveTo(495, 350, 498, 332)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath();
-    ctxZone.moveTo(495,335)
-    ctxZone.lineTo(477,367)
-    ctxZone.lineTo(485,372)
-    ctxZone.lineTo(496,340)
+    ctxZone.moveTo(495, 335)
+    ctxZone.lineTo(477, 367)
+    ctxZone.lineTo(485, 372)
+    ctxZone.lineTo(496, 340)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(476,370)
-    ctxZone.quadraticCurveTo(475,380,485,374)
+    ctxZone.moveTo(476, 370)
+    ctxZone.quadraticCurveTo(475, 380, 485, 374)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
 }
 
 
-function dibujarBrazoDerecho(){
+function dibujarBrazoDerecho() {
     ctxZone.lineWidth = 1
     ctxZone.fillStyle = '#0d0b14'
     ctxZone.strokeStyle = '#0d0b14'
@@ -77,20 +79,20 @@ function dibujarBrazoDerecho(){
     ctxZone.fill()
     ctxZone.stroke();
     ctxZone.beginPath()
-    ctxZone.moveTo(519,333);
-    ctxZone.lineTo(534,364);
-    ctxZone.lineTo(524,368);
-    ctxZone.lineTo(508,330);
+    ctxZone.moveTo(519, 333);
+    ctxZone.lineTo(534, 364);
+    ctxZone.lineTo(524, 368);
+    ctxZone.lineTo(508, 330);
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke();
     ctxZone.beginPath();
-    ctxZone.bezierCurveTo(531,360,535,370,541,371)
+    ctxZone.bezierCurveTo(531, 360, 535, 370, 541, 371)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.bezierCurveTo(541,371,530,377,527,374)
+    ctxZone.bezierCurveTo(541, 371, 530, 377, 527, 374)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
@@ -101,16 +103,16 @@ function dibujarBrazoDerecho(){
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(528,374)
-    ctxZone.lineTo(538,371)
-    ctxZone.lineTo(530,360)
-    ctxZone.lineTo(523,365)
+    ctxZone.moveTo(528, 374)
+    ctxZone.lineTo(538, 371)
+    ctxZone.lineTo(530, 360)
+    ctxZone.lineTo(523, 365)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(529,376)
-    ctxZone.quadraticCurveTo(534,386,539,370)
+    ctxZone.moveTo(529, 376)
+    ctxZone.quadraticCurveTo(534, 386, 539, 370)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
@@ -118,48 +120,48 @@ function dibujarBrazoDerecho(){
 
 
 
-function dibujarColumna(){
+function dibujarColumna() {
     ctxZone.lineWidth = 1
     ctxZone.fillStyle = '#0d0b14'
     ctxZone.strokeStyle = '#0d0b14'
     ctxZone.beginPath()
-    ctxZone.moveTo(499,332)
-    ctxZone.quadraticCurveTo(505,335,507,330)
+    ctxZone.moveTo(499, 332)
+    ctxZone.quadraticCurveTo(505, 335, 507, 330)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(507,330)
-    ctxZone.lineTo(506,327)
-    ctxZone.lineTo(498,327)
-    ctxZone.lineTo(498,332)
+    ctxZone.moveTo(507, 330)
+    ctxZone.lineTo(506, 327)
+    ctxZone.lineTo(498, 327)
+    ctxZone.lineTo(498, 332)
     ctxZone.closePath()
     ctxZone.fill();
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(500,332)
-    ctxZone.quadraticCurveTo(516,327,520,335)
+    ctxZone.moveTo(500, 332)
+    ctxZone.quadraticCurveTo(516, 327, 520, 335)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(520,335)
-    ctxZone.lineTo(516.5,350)
-    ctxZone.lineTo(493,350)
-    ctxZone.lineTo(491,336)
-    ctxZone.lineTo(500,330)
+    ctxZone.moveTo(520, 335)
+    ctxZone.lineTo(516.5, 350)
+    ctxZone.lineTo(493, 350)
+    ctxZone.lineTo(491, 336)
+    ctxZone.lineTo(500, 330)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(491,336)
-    ctxZone.quadraticCurveTo(495,330,500,332)
+    ctxZone.moveTo(491, 336)
+    ctxZone.quadraticCurveTo(495, 330, 500, 332)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(516,350)
-    ctxZone.quadraticCurveTo(518,370,522,373)
+    ctxZone.moveTo(516, 350)
+    ctxZone.quadraticCurveTo(518, 370, 522, 373)
     ctxZone.stroke()
     ctxZone.beginPath()
     ctxZone.moveTo(522, 373)
@@ -169,15 +171,15 @@ function dibujarColumna(){
     ctxZone.stroke()
     ctxZone.beginPath()
     ctxZone.moveTo(491, 374.5)
-    ctxZone.quadraticCurveTo(495,360,492.5,350)
+    ctxZone.quadraticCurveTo(495, 360, 492.5, 350)
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(492.5,350)
-    ctxZone.lineTo(516.5,350)
-    ctxZone.lineTo(516.5,362)
-    ctxZone.lineTo(518.5,367)
-    ctxZone.lineTo(520,373)
-    ctxZone.lineTo(492,375)
+    ctxZone.moveTo(492.5, 350)
+    ctxZone.lineTo(516.5, 350)
+    ctxZone.lineTo(516.5, 362)
+    ctxZone.lineTo(518.5, 367)
+    ctxZone.lineTo(520, 373)
+    ctxZone.lineTo(492, 375)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
@@ -185,36 +187,36 @@ function dibujarColumna(){
 
 
 
-function dibujarPiernaIzquierda(){
+function dibujarPiernaIzquierda() {
     ctxZone.lineWidth = 1
     ctxZone.fillStyle = '#0d0b14'
     ctxZone.strokeStyle = '#0d0b14'
     ctxZone.beginPath()
-    ctxZone.bezierCurveTo(494,377,496,400,487,443)
+    ctxZone.bezierCurveTo(494, 377, 496, 400, 487, 443)
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(488,443)
-    ctxZone.quadraticCurveTo(500,445,506.5,442)
+    ctxZone.moveTo(488, 443)
+    ctxZone.quadraticCurveTo(500, 445, 506.5, 442)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.bezierCurveTo(506.5,442,508,443,506.5,378)
+    ctxZone.bezierCurveTo(506.5, 442, 508, 443, 506.5, 378)
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(506.5,378)
-    ctxZone.lineTo(495,378)
-    ctxZone.lineTo(493.3,405)
-    ctxZone.lineTo(492,418)
-    ctxZone.lineTo(490,430)
-    ctxZone.lineTo(488,442.7)
-    ctxZone.lineTo(506,442)
+    ctxZone.moveTo(506.5, 378)
+    ctxZone.lineTo(495, 378)
+    ctxZone.lineTo(493.3, 405)
+    ctxZone.lineTo(492, 418)
+    ctxZone.lineTo(490, 430)
+    ctxZone.lineTo(488, 442.7)
+    ctxZone.lineTo(506, 442)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath();
-    ctxZone.moveTo(490,445)
-    ctxZone.quadraticCurveTo(478,475,503,443)
+    ctxZone.moveTo(490, 445)
+    ctxZone.quadraticCurveTo(478, 475, 503, 443)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
@@ -222,34 +224,34 @@ function dibujarPiernaIzquierda(){
 
 
 
-function dibujarPiernaDerecha(){
+function dibujarPiernaDerecha() {
     ctxZone.lineWidth = 1
     ctxZone.fillStyle = '#0d0b14'
     ctxZone.strokeStyle = '#0d0b14'
     ctxZone.beginPath()
-    ctxZone.moveTo(519,370)
-    ctxZone.quadraticCurveTo(520,400,530,441)
+    ctxZone.moveTo(519, 370)
+    ctxZone.quadraticCurveTo(520, 400, 530, 441)
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(530,441)
-    ctxZone.quadraticCurveTo(520,446,513,443)
+    ctxZone.moveTo(530, 441)
+    ctxZone.quadraticCurveTo(520, 446, 513, 443)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(513,443)
-    ctxZone.lineTo(505,375)
-    ctxZone.lineTo(519,373)
-    ctxZone.lineTo(519,385)
-    ctxZone.lineTo(521.5,400)
-    ctxZone.lineTo(524.5,420)
-    ctxZone.lineTo(529.5,441)
+    ctxZone.moveTo(513, 443)
+    ctxZone.lineTo(505, 375)
+    ctxZone.lineTo(519, 373)
+    ctxZone.lineTo(519, 385)
+    ctxZone.lineTo(521.5, 400)
+    ctxZone.lineTo(524.5, 420)
+    ctxZone.lineTo(529.5, 441)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
     ctxZone.beginPath()
-    ctxZone.moveTo(528,442)
-    ctxZone.quadraticCurveTo(512,476,515,440)
+    ctxZone.moveTo(528, 442)
+    ctxZone.quadraticCurveTo(512, 476, 515, 440)
     ctxZone.closePath()
     ctxZone.fill()
     ctxZone.stroke()
@@ -346,10 +348,10 @@ console.log(objeto)
 
 const buttonContainer = document.getElementById('button-container')
 let vidas = 0;
-let coincidencias=0;
-let arrayLetrasAcertadas=[];
-let arrayLetrasIncorrectas=[];
-let arrayLetrasAcertadasEIncorrectas=[]
+let coincidencias = 0;
+let arrayLetrasAcertadas = [];
+let arrayLetrasIncorrectas = [];
+let arrayLetrasAcertadasEIncorrectas = []
 // Itera sobre el array de letras
 letters.forEach((letter) => {
     // Crea un botón para cada letra
@@ -361,40 +363,45 @@ letters.forEach((letter) => {
     // Asigna la letra como texto del botón
     button.textContent = letter
 
-    
 
-    button.addEventListener('click',()=>{
-        if(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==button.innerText) === -1){
-            vidas = vidas+1;
+
+    button.addEventListener('click', () => {
+        containListaPalabrasUsadas.insertAdjacentHTML('beforebegin',`<p class="contenedor-lista-palabras__letra">${button.innerText}</p>`)
+        if (arrayPalabraAleatorio.findIndex((letraBuscada) => letraBuscada == button.innerText) === -1) {
+            vidas = vidas + 1;
             arrayLetrasIncorrectas.push(button.innerText)
             arrayLetrasAcertadasEIncorrectas.push(button.innerText)
+            
             console.log(vidas)
-            if(vidas==1){
+            if (vidas == 1) {
                 dibujarCabeza()
-            }else if(vidas==2){
+            } else if (vidas == 2) {
                 dibujarColumna()
-            }else if(vidas==3){
+            } else if (vidas == 3) {
                 dibujarBrazoIzquierdo()
-            }else if(vidas==4){
+            } else if (vidas == 4) {
                 dibujarBrazoDerecho()
-            }else if(vidas==5){
+            } else if (vidas == 5) {
                 dibujarPiernaIzquierda()
-            }else if(vidas==6){
+            } else if (vidas == 6) {
                 dibujarPiernaDerecha()
-            }else if(vidas==7){
+            } else if (vidas == 7) {
                 console.log("PERDIO DE UNA")
                 mostrarResultado.classList.toggle('lost')
                 //mostrarResultadoBloquear.classList.toggle('lost')
-                
+                columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
+                columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
+                columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
+
             }
-        }else{
+        } else {
             arrayLetrasAcertadas.push(button.innerText)
             arrayLetrasAcertadasEIncorrectas.push(button.innerText)
         }
         //console.log(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==='A'));
     })
 
-    
+
 
     button.addEventListener('click', () => {
         console.log(button.innerText)
@@ -407,41 +414,50 @@ letters.forEach((letter) => {
                     objeto[i].xInicio + 10,
                     centroHeight - 5
                 )
-                objeto[i].use =true
-                
+                objeto[i].use = true
+
             }
-            
-            
+
+
         }
 
-        
+
         button.remove()
         /*ctxWordsZone.font = '25px Impact'
         ctxWordsZone.fillStyle = '#fff';
         ctxWordsZone.fillText(button.innerText, objeto[1].xInicio+10,centroHeight-5)*/
     })
 
-    button.addEventListener('click',()=>{
-        if(Object.values(objeto).every(entrada => entrada.use ===true)===true && vidas<7){
+    button.addEventListener('click', () => {
+        if (Object.values(objeto).every(entrada => entrada.use === true) === true && vidas < 7) {
             console.log("Ya gano")
             mostrarResultado.classList.toggle('active');
             //mostrarResultadoBloquear.classList.toggle('active');
-            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
-            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
-            columnaDescription.insertAdjacentHTML('beforebegin',`<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
-                console.log(palabraCreadaEnAleatorio)
-        }else{
-            
-            console.log("Esta procesando y las vidas son:"+vidas)
+            columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
+            columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
+            columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
+
+            console.log(palabraCreadaEnAleatorio)
+        } else {
+
+            console.log("Esta procesando y las vidas son:" + vidas)
         }
     })
 
-//Object.values(objeto).every(entrada => entrada.use ===true)
     
+
+    //Object.values(objeto).every(entrada => entrada.use ===true)
+
 
     // Inserta el botón en el contenedor
     buttonContainer.appendChild(button)
 })
+
+function nuevaPalabraSecreta(){
+    let palabraParaBancoArray = txtPalabraSecreta.value;    
+    palabrasGroup.push(palabraParaBancoArray)
+    txtPalabraSecreta.value = ''
+}
 /*
 for(i=0;i<arrayPalabraAleatorio.length;i++){
     if(objeto[i].letra ==='d'){

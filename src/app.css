@@ -14,12 +14,14 @@
 
 .contenedor-pag1 {
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 17.5% 65% 17.5%;
   position: relative;
 }
 .contenedor-pag1__col1 {
   z-index: 2;
   color: aliceblue;
+  display: flex;
+  align-items: center;
 }
 .contenedor-pag1__col2 {
   display: flex;
@@ -49,17 +51,20 @@
           clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
 }
 .contenedor-pag1__content-perdio {
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 450px;
   color: white;
   opacity: 0;
   transition: 0.5s;
   transform: scale(0);
   z-index: 3;
   position: absolute;
-  background-color: #23fe1c;
-  left: 40%;
-  top: 30%;
+  background-image: url(./img/warrior-end-game-3.png);
+  background-size: cover;
+  left: 28%;
+  top: 25%;
+  -webkit-clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
+          clip-path: polygon(0% 5%, 3% 0%, 7% 0%, 10% 5%, 90% 5%, 93% 0%, 97% 0%, 100% 5%, 100% 95%, 97% 100%, 93% 95%, 8% 95%, 3% 100%, 0% 95%);
 }
 .active .contenedor-pag1__content-resultados {
   opacity: 1;
@@ -85,6 +90,9 @@
   margin-left: 30px;
   color: #ff00ee;
 }
+.contenedor-pag1 .subtitulo-gano--perdio {
+  color: #ff6600;
+}
 .contenedor-pag1 .table-results-gano {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,9 +112,15 @@
   font-size: 18px;
   color: #000;
 }
+.contenedor-pag1 .table-results-gano__tittle--perdio {
+  background-color: #ff4400;
+}
 .contenedor-pag1 .table-results-gano__tittle--description {
   background-color: #020110;
   color: #fff;
+}
+.contenedor-pag1 .table-results-gano__tittle--description--perdio {
+  background-color: #0c141b;
 }
 .contenedor-pag1 .table-results-gano__item {
   font-family: "Cabin", sans-serif;
@@ -151,6 +165,11 @@
   overflow: hidden;
   animation: animate 6s linear infinite;
 }
+.contenedor-pag1 .table-results-gano-palabra--perdio::before {
+  color: #ff4400;
+  -webkit-text-stroke: 0vw #ff4400;
+  border-right-color: #ff4400;
+}
 @keyframes animate {
   0% {
     width: 0;
@@ -175,6 +194,85 @@
 }
 .lost .contenedor-pag1__col2 {
   z-index: 1;
+}
+
+.contedor-col-formulario {
+  background-image: url(./img/futuristic-playgame.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  margin-left: 15px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contedor-col-formulario__tittle {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  -webkit-text-stroke: 1px #ff0044;
+}
+.contedor-col-formulario__input {
+  margin-bottom: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  width: 200px;
+}
+.contedor-col-formulario__btn {
+  background-color: #fe1a5b;
+  border-color: #fe1a5b;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  width: 80px;
+  color: #fff;
+  border-radius: 15px;
+  padding: 8px 0;
+}
+
+.contenedor-letras-usadas {
+  background-image: url(./img/futuristic-playgame.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-left: 0;
+  margin-right: 15px;
+  min-height: 100px;
+}
+.contenedor-letras-usadas__tittle {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contenedor-lista-palabras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-lista-palabras__letra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 0 10px;
 }
 
 .titulo-ahorcado {
@@ -251,6 +349,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 150px;
 }
 
 .custom-button {
