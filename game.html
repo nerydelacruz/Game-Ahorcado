@@ -29,6 +29,7 @@
     <main class="contenedor-pag1 ">
         <div class="contenedor-pag1__content-resultados ">
             <h2 class="titulo-gano">AHORCADO</h2>
+            <h2 class="palabra-ganaste" >Ganaste, Felicidades!!!</h2>
             <p class="subtitulo-gano">Aqui estan tus resultados</p>
             <div class="table-results-gano">
                 <div>
@@ -47,11 +48,14 @@
             </div>
             <div class="container-table-gano-palabra">
                 <p>Palabra secreta:</p>
-                <h2 class="table-results-gano-palabra" data-text="Otorri" >Otorri</h2>
+                <h2 id="palabra-secreta-gano" class="table-results-gano-palabra" data-text="Otorri" >Otorri</h2>
+                <a class="btn-otra-partida" onclick="nuevaPartida()">Otra Partida</a>
             </div>
+           
         </div>
         <div class="contenedor-pag1__content-perdio">
             <h2 class="titulo-gano">AHORCADO</h2>
+            <h2 class="palabra-perdiste" >Perdiste, Suerte la Proxima!!!</h2>
             <p class="subtitulo-gano subtitulo-gano--perdio">Aqui estan tus resultados</p>
             <div class="table-results-gano">
                 <div>
@@ -70,19 +74,16 @@
             </div>
             <div class="container-table-gano-palabra">
                 <p>Palabra secreta:</p>
-                <h2 class="table-results-gano-palabra table-results-gano-palabra--perdio" data-text="Otorri" >Otorri</h2>
+                <h2 id="palabra-secreta-perdio" class="table-results-gano-palabra table-results-gano-palabra--perdio" data-text="Otorri" >Otorri</h2>
+                <a class="btn-otra-partida btn-otra-partida__perdio" onclick="nuevaPartida()">Otra Partida</a>
             </div>
         </div>
         <div class="contenedor-pag1__col1">
-            <div class="contedor-col-formulario">
-                <p class="contedor-col-formulario__tittle">Nueva Palabra Secreta:</p>
-                <input type="text" class="contedor-col-formulario__input" id="txtPalabraSecreta">
-                <button class="contedor-col-formulario__btn" onclick="nuevaPalabraSecreta()">Save</button>
-            </div>
+            
         </div>
         <div class="contenedor-pag1__col2">
             <h1 class="titulo-ahorcado-page2">AHORCADO</h1>
-            <canvas width="900" height="500px" class="game-zone" id="game-zone-id"></canvas>
+            <canvas width="900" height="500" class="game-zone" id="game-zone-id"></canvas>
             <canvas width="1100" height="100" class="words-zone" id="words-zone-id"></canvas>
             <div id="button-container" class="button-container-class"></div>
         </div>

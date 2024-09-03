@@ -8,6 +8,9 @@ const columnaDescription = document.querySelector('.table-results-gano__inyeccio
 const columnaDescriptionPerdio = document.querySelector('.table-results-gano__inyeccion--perdio')
 const txtPalabraSecreta = document.getElementById('txtPalabraSecreta')
 const containListaPalabrasUsadas = document.querySelector('.contenedor-lista-palabras')
+let dataTextEtiqueta1 = document.getElementById('palabra-secreta-gano');
+let dataTextEtiqueta2 = document.getElementById('palabra-secreta-perdio')
+
 function dibujarCabeza() {
     ctxZone.lineWidth = 2
     ctxZone.fillStyle = '#0d0b14'
@@ -288,7 +291,8 @@ const letters = [
     'Y',
     'Z',
 ]
-const palabrasGroup = ['PANCHO', 'DADO', 'OTORRINORANRINGOLOGOZXXXXDDD']
+const palabrasGroup = ['PANCHO', 'DADO', 'PARALELEPIPEDO','CALEIDOSCOPIO','IDIOSINCRASIA','ININTELIGIBLE','FLEBOTOMISTA','TRANSEUNTES',
+    'ADHERENCIA','ONOMATOPEYA','MISANTROPiA','TERGIVERSACIÓN','EPIDERMIS','CUADRUPLICAR','INFRAESTRUCTURA']
 
 // Referencia al contenedor donde se agregarán los botones
 
@@ -362,9 +366,6 @@ letters.forEach((letter) => {
 
     // Asigna la letra como texto del botón
     button.textContent = letter
-
-
-
     button.addEventListener('click', () => {
         containListaPalabrasUsadas.insertAdjacentHTML('beforebegin',`<p class="contenedor-lista-palabras__letra">${button.innerText}</p>`)
         if (arrayPalabraAleatorio.findIndex((letraBuscada) => letraBuscada == button.innerText) === -1) {
@@ -392,7 +393,8 @@ letters.forEach((letter) => {
                 columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
                 columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
                 columnaDescriptionPerdio.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
-
+                dataTextEtiqueta2.setAttribute("data-text", palabraCreadaEnAleatorio);
+                dataTextEtiqueta2.innerText = palabraCreadaEnAleatorio
             }
         } else {
             arrayLetrasAcertadas.push(button.innerText)
@@ -400,8 +402,6 @@ letters.forEach((letter) => {
         }
         //console.log(arrayPalabraAleatorio.findIndex((letraBuscada)=> letraBuscada==='A'));
     })
-
-
 
     button.addEventListener('click', () => {
         console.log(button.innerText)
@@ -417,11 +417,7 @@ letters.forEach((letter) => {
                 objeto[i].use = true
 
             }
-
-
         }
-
-
         button.remove()
         /*ctxWordsZone.font = '25px Impact'
         ctxWordsZone.fillStyle = '#fff';
@@ -436,7 +432,8 @@ letters.forEach((letter) => {
             columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadas.length}</p>`)
             columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasIncorrectas.length}</p>`)
             columnaDescription.insertAdjacentHTML('beforebegin', `<p class="table-results-gano__results">${arrayLetrasAcertadasEIncorrectas.length}</p>`)
-
+            dataTextEtiqueta1.setAttribute("data-text", palabraCreadaEnAleatorio);
+            dataTextEtiqueta1.innerText = palabraCreadaEnAleatorio
             console.log(palabraCreadaEnAleatorio)
         } else {
 
@@ -457,6 +454,16 @@ function nuevaPalabraSecreta(){
     let palabraParaBancoArray = txtPalabraSecreta.value;    
     palabrasGroup.push(palabraParaBancoArray)
     txtPalabraSecreta.value = ''
+}
+
+function nuevaPartida(){
+    location.reload()
+    if(mostrarResultado.classList.contains('active')){
+        mostrarResultado.classList.toggle('active');
+    }else if(mostrarResultado.classList.contains('lost')){
+        mostrarResultado.classList.toggle('lost');
+    }
+    
 }
 /*
 for(i=0;i<arrayPalabraAleatorio.length;i++){

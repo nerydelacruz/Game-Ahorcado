@@ -17,6 +17,52 @@
   grid-template-columns: 17.5% 65% 17.5%;
   position: relative;
 }
+.contenedor-pag1 .palabra-ganaste {
+  position: absolute;
+  top: 15px;
+  left: 250px;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: #f70f6c;
+  letter-spacing: 1px;
+  animation: ganador 0.5s ease infinite;
+}
+.contenedor-pag1 .palabra-perdiste {
+  position: absolute;
+  top: 15px;
+  left: 250px;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #f70f6c;
+  letter-spacing: 1px;
+  animation: ganador2 0.5s ease infinite;
+}
+@keyframes ganador {
+  0% {
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  100% {
+    left: 230px;
+    letter-spacing: 3px;
+    color: #ff00ee;
+  }
+}
+@keyframes ganador2 {
+  0% {
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  100% {
+    left: 230px;
+    letter-spacing: 3px;
+    color: #ff4400;
+  }
+}
 .contenedor-pag1__col1 {
   z-index: 2;
   color: aliceblue;
@@ -36,7 +82,7 @@
 }
 .contenedor-pag1__content-resultados {
   width: 800px;
-  height: 450px;
+  height: 470px;
   color: white;
   opacity: 0;
   transition: 0.5s;
@@ -52,7 +98,7 @@
 }
 .contenedor-pag1__content-perdio {
   width: 800px;
-  height: 450px;
+  height: 470px;
   color: white;
   opacity: 0;
   transition: 0.5s;
@@ -140,6 +186,25 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.contenedor-pag1 .container-table-gano-palabra .btn-otra-partida {
+  background-color: #f70f6c;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contenedor-pag1 .container-table-gano-palabra .btn-otra-partida__perdio {
+  background-color: #ff4400;
+}
+.contenedor-pag1 .container-table-gano-palabra .btn-otra-partida:hover {
+  background-color: #fff;
+  color: #f70f6c;
+}
+.contenedor-pag1 .container-table-gano-palabra .btn-otra-partida__perdio:hover {
+  color: #ff4400;
 }
 .contenedor-pag1 .table-results-gano-palabra {
   margin: 0;
@@ -240,7 +305,7 @@
 }
 
 .contenedor-letras-usadas {
-  background-image: url(./img/futuristic-playgame.jpg);
+  background-image: url(./img/cyberponk-boy.jpg);
   background-position: center;
   background-size: cover;
   margin-left: 0;
@@ -250,10 +315,11 @@
 .contenedor-letras-usadas__tittle {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 800;
   font-style: normal;
   font-size: 20px;
   text-align: center;
+  color: #fff;
 }
 
 .contenedor-lista-palabras {
